@@ -1,0 +1,14 @@
+# Dependências de desenvolvimento
+node_modules/
+dist/
+build/
+.env
+
+# Arquivos temporários do Sistema Operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos temporários de editores e escritório
+~$*.docx
+*.tmp
+*.log
