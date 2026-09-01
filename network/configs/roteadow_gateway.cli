@@ -1,0 +1,29 @@
+enable
+configure terminal
+hostname ROTEADOR-GATEWAY
+
+interface GigabitEthernet0/0
+ description ENLACE_TRUNK_SWITCH
+ no shutdown
+exit
+
+interface GigabitEthernet0/0.10
+ description GATEWAY_VLAN_10_ADMIN
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
+exit
+
+interface GigabitEthernet0/0.20
+ description GATEWAY_VLAN_20_OPERACAO
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
+exit
+
+interface GigabitEthernet0/0.30
+ description GATEWAY_VLAN_30_SERVIDORES
+ encapsulation dot1Q 30
+ ip address 192.168.30.1 255.255.255.0
+exit
+
+end
+write memory

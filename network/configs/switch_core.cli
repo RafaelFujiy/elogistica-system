@@ -1,0 +1,45 @@
+enable
+configure terminal
+hostname SW-CORE-CEREGATI
+
+vlan 10
+ name ADMIN
+exit
+
+vlan 20
+ name OPERACAO
+exit
+
+vlan 30
+ name SERVIDORES
+exit
+
+interface FastEthernet0/1
+ description CONEXAO_PC_ADMIN
+ switchport mode access
+ switchport access vlan 10
+ spanning-tree portfast
+exit
+
+interface FastEthernet0/2
+ description CONEXAO_COLETOR_GALPAO
+ switchport mode access
+ switchport access vlan 20
+ spanning-tree portfast
+exit
+
+interface FastEthernet0/3
+ description CONEXAO_SERVIDOR_DOCKER
+ switchport mode access
+ switchport access vlan 30
+ spanning-tree portfast
+exit
+
+interface GigabitEthernet0/1
+ description LINK_TRUNK_ROTEADOR
+ switchport mode trunk
+ switchport trunk allowed vlan 10,20,30
+exit
+
+end
+write memory
