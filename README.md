@@ -12,13 +12,13 @@ A **Ceregati E-Logística** é uma transportadora focada em operações de trans
 
 ## Estrutura do Repositório
 
-ceregati-elogistica-pim3/
+- `/docs`: Documentação acadêmica e diagramas técnicos.
 
-├── 📄 README.md              # Documentação principal do repositório
-├── 📁 docs/                  # Documentação acadêmica (Padrão ABNT) e diagramas UML/Redes
-├── 📁 network/               # Arquivos de simulação (.pkt) e scripts de configuração (Switches/Routers)
-├── 📁 backend/               # Código-fonte da API RESTful (Node.js/TypeScript) e orquestração Docker
-└── 📁 frontend/              # Código-fonte da interface web de rastreamento (React/Tailwind)
+- `/network`: Arquivos de topologia e scripts de switches e roteadores.
+
+- `/backend`: API RESTful em Node.js com TypeScript e Docker.
+
+- `/frontend`: Interface administrativa e de rastreamento em React.
 
 ## Como Executar o Projeto
 - Clone o repositório:
